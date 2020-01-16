@@ -1016,6 +1016,7 @@ li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1600px;
+  margin: auto;
   margin-bottom: 121px;
   padding-bottom: 30px; }
   .form-contact__title {
