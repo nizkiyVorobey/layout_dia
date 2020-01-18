@@ -46,7 +46,9 @@ li {
         justify-content: space-around;
     padding-top: 48px;
     max-width: 1600px;
-    margin: auto; }
+    margin: auto;
+    -webkit-animation: move-header-nav 1s ease-in-out;
+            animation: move-header-nav 1s ease-in-out; }
   .header__nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -193,7 +195,9 @@ li {
     max-width: 400px;
     justify-self: end;
     -ms-flex-item-align: center;
-        align-self: center; }
+        align-self: center;
+    -webkit-animation: move-header-description 1s ease-in-out;
+            animation: move-header-description 1s ease-in-out; }
   .header__description-about {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
@@ -217,7 +221,9 @@ li {
             justify-content: flex-end;
     border-top-left-radius: 200px;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-animation: move-header-slider 1s ease-in-out;
+            animation: move-header-slider 1s ease-in-out; }
   .header .slider__img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -1189,6 +1195,54 @@ li {
     display: none; }
   .form-contact {
     margin-bottom: 0; } }
+
+@-webkit-keyframes move-header-nav {
+  from {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw); }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes move-header-nav {
+  from {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw); }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@-webkit-keyframes move-header-description {
+  from {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes move-header-description {
+  from {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes move-header-slider {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes move-header-slider {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
 
 html {
   scroll-behavior: smooth; }
