@@ -792,6 +792,7 @@ li {
 .testimonials-card__item {
   width: 314px;
   padding: 32px;
+  margin: auto 20px;
   margin-bottom: 70px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -908,7 +909,9 @@ li {
 
 @media (max-width: 500px) {
   .testimonials {
-    padding-top: 90px; } }
+    padding-top: 90px; }
+    .testimonials-title-block__third-title {
+      padding-right: 20px; } }
 
 .cta-block {
   position: relative;
