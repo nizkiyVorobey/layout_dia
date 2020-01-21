@@ -14,7 +14,12 @@ body {
 
 a {
   text-decoration: none;
-  color: white; }
+  color: white;
+  outline: none; }
+  a:focus {
+    outline: 2px solid #fcc91d; }
+  a:active, a:hover {
+    outline: none; }
 
 ul,
 li {
@@ -99,7 +104,9 @@ li {
               justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      -webkit-animation: none;
+              animation: none; }
     .header .header__logo {
       margin: 0;
       margin-bottom: 30px; }
@@ -119,7 +126,10 @@ li {
       margin: 0; }
     .header .header__hire-us-link {
       margin: 0;
-      margin-top: 30px; } }
+      margin-top: 30px; }
+    .header .header__description {
+      -webkit-animation: none;
+              animation: none; } }
   @media (max-width: 550px) {
     .header .header__logo {
       margin: auto;
@@ -140,17 +150,15 @@ li {
               flex-direction: column;
       -webkit-transform: translateX(103%);
               transform: translateX(103%);
-      -webkit-transition: -webkit-transform 1s ease-in-out;
-      transition: -webkit-transform 1s ease-in-out;
-      transition: transform 1s ease-in-out;
-      transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+      -webkit-transition: -webkit-transform 0.8s ease-in-out;
+      transition: -webkit-transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
       position: absolute;
       top: 0;
       min-height: 482px;
       background-color: #008aff;
-      border-bottom-left-radius: 200px;
-      -webkit-box-shadow: -3px 1px 10px black;
-              box-shadow: -3px 1px 10px black; }
+      border-bottom-left-radius: 200px; }
     .header .header__nav-item {
       margin: 10px 20px;
       text-align: center; }
@@ -167,10 +175,10 @@ li {
       width: 100%;
       -webkit-transform: translateX(100%);
               transform: translateX(100%);
-      -webkit-transition: -webkit-transform 1s ease-in-out;
-      transition: -webkit-transform 1s ease-in-out;
-      transition: transform 1s ease-in-out;
-      transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+      -webkit-transition: -webkit-transform 0.8s ease-in-out;
+      transition: -webkit-transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
       position: absolute;
       bottom: -350px; }
     .header .move-ul {
@@ -443,7 +451,9 @@ li {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 15px;
-    margin: 0 80px 50px;
+    margin: 0 60px 15px;
+    padding: 20px;
+    padding-top: 35px;
     -webkit-transition: background-color 0.2s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -476,11 +486,7 @@ li {
   .card__item:not(:last-child) {
     margin-bottom: 70px; }
   .card__img {
-    margin-bottom: 0; } }
-
-@media (max-width: 550px) {
-  .expertise {
-    padding: 50px 0 0; }
+    margin-bottom: 0; }
   .card__item:hover {
     background: none;
     -webkit-transform: none;
@@ -492,6 +498,10 @@ li {
               transform: none;
       -webkit-box-shadow: none;
               box-shadow: none; } }
+
+@media (max-width: 550px) {
+  .expertise {
+    padding: 50px 0 0; } }
 
 .service {
   display: -webkit-box;
@@ -843,8 +853,8 @@ li {
       -webkit-transform: rotate(-60deg);
               transform: rotate(-60deg);
       z-index: -1;
-      -webkit-transition: left, top, right, bottom 0.3s ease-in-out;
-      transition: left, top, right, bottom 0.3s ease-in-out; }
+      -webkit-transition: left 0.3s ease-in-out, top 0.3s ease-in-out, right 0.3s ease-in-out, bottom 0.3s ease-in-out;
+      transition: left 0.3s ease-in-out, top 0.3s ease-in-out, right 0.3s ease-in-out, bottom 0.3s ease-in-out; }
     .testimonials-card__item-img::before {
       left: -48px;
       top: -2px; }
