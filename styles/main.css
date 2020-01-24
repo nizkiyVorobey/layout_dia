@@ -15,9 +15,16 @@ body {
 a {
   text-decoration: none;
   color: white;
-  outline: none; }
-  a:focus {
-    outline: 2px solid #fcc91d; }
+  outline: none;
+  position: relative; }
+  a:focus::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    background: deepskyblue;
+    position: absolute; }
   a:active, a:hover {
     outline: none; }
 
@@ -41,7 +48,7 @@ li {
     min-height: 480px; }
   .header__logo {
     margin: 0 32px 0 64px;
-    width: 60px;
+    width: 45px;
     height: 28px; }
   .header__nav {
     display: -webkit-box;
@@ -86,6 +93,8 @@ li {
       opacity: 1; }
   .header__hire-us-link {
     margin: 0 64px 0 32px; }
+    .header__hire-us-link::after {
+      opacity: 1; }
   .header__nav-link--is-active::after {
     content: "";
     display: block;
