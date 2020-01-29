@@ -117,8 +117,7 @@ li {
       -webkit-animation: none;
               animation: none; }
     .header .header__logo {
-      margin: 0;
-      margin-bottom: 30px; }
+      display: none; }
     .header .header__nav-list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -139,10 +138,11 @@ li {
     .header .header__description {
       -webkit-animation: none;
               animation: none; } }
-  @media (max-width: 550px) {
+  @media (max-width: 780px) {
     .header .header__logo {
       margin: auto;
-      z-index: 3; }
+      z-index: 3;
+      display: block; }
     .header .header__nav {
       -webkit-box-align: start;
           -ms-flex-align: start;
@@ -196,9 +196,6 @@ li {
     .header .move-hire-us {
       -webkit-transform: translateX(0);
               transform: translateX(0); } }
-  @media (max-width: 360px) {
-    .header .header__btn-link {
-      margin-left: 60px !important; } }
   .header__slider-part {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -262,8 +259,9 @@ li {
   @media (max-width: 1024px) {
     .header .header__description,
     .header .header__btn-link {
-      margin: auto; } }
-  @media (max-width: 800px) {
+      margin: auto;
+      position: static; } }
+  @media (max-width: 780px) {
     .header .header__slider-part {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -278,7 +276,7 @@ li {
       -ms-flex-item-align: start;
           align-self: flex-start;
       max-width: 100vw;
-      margin-top: 70px; }
+      margin-top: 120px; }
     .header .slider__item {
       grid-template-columns: repeat(3, 100vw); } }
   @media (max-width: 600px) {
@@ -293,6 +291,15 @@ li {
       margin-bottom: 30px; }
     .header .header__btn-link {
       margin: auto; } }
+
+@media (max-width: 360px) {
+  .header {
+    border-bottom-left-radius: 0;
+    overflow: hidden; }
+    .header__container {
+      overflow: visible; }
+  .header__nav-list {
+    border-bottom-left-radius: 0 !important; } }
 
 .burger-menu {
   position: absolute;
@@ -320,7 +327,7 @@ li {
   -webkit-transform: rotate(45deg) translate(-7px, -6px);
           transform: rotate(45deg) translate(-7px, -6px); }
 
-@media (max-width: 550px) {
+@media (max-width: 780px) {
   .burger-menu {
     display: block; } }
 
@@ -412,7 +419,7 @@ li {
   .welcome__title {
     text-align: center; } }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .welcome-wrapper {
     padding-top: 80px; }
   .welcome {
@@ -508,7 +515,7 @@ li {
       -webkit-box-shadow: none;
               box-shadow: none; } }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .expertise {
     padding: 50px 0 0; } }
 
@@ -680,7 +687,7 @@ li {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .service {
     padding-top: 70px; }
   .service__card-item {
